@@ -1,15 +1,91 @@
-.container {
-  padding: 0 2rem;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo img {
+  max-width: 100px; /* Adjust as needed */
+}
+
+.navLinks ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navLinks ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.hamburgerMenu {
+  display: none; /* Hide by default */
+}
+
+.show {
+  display: block !important; /* Show when toggled */
+}
+
+.hide {
+  display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .hamburgerMenu {
+    display: block; /* Show the hamburger menu button */
+  }
+
+  .navLinks {
+    display: none; /* Hide the navigation links */
+  }
+
+  .navLinks.show {
+    width: 100%;
+  }
 }
 
 .main {
-  min-height: 100vh;
-  padding: 4rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.topSection {
+  height: 100vh;
+  width: 75%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ctaSection {
+  text-align: center;
+  width: 100%;
+}
+
+.ctaSection2 {
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  font-size: 2rem;
+  background-image: linear-gradient(180deg,#37307b,rgba(85,54,150,0));
+}
+
+.roadmap {
+  text-align: center;
+  width: 70%;
+}
+
+.arrowDown {
+  transform: rotate(90deg);
 }
 
 .footer {
@@ -40,7 +116,6 @@
 }
 
 .title {
-  margin: 0;
   line-height: 1.15;
   font-size: 4rem;
 }
@@ -101,11 +176,6 @@
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
 }
 
 @media (max-width: 600px) {
